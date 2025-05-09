@@ -18,8 +18,9 @@ return new class extends Migration
             $table->text('description');
             $table->integer('category_id');
             $table->timestamps();
+            $table->softDeletes();
             //another field needed to be added for SOFT-DELETE, just as we added in the post.php model
-            //by php artisan make:migration add_posts_table --table=posts thnen migrate the newly added table. 
+            //by php artisan make:migration add_posts_table --table=posts thnen migrate the newly added table.
         });
     }
 
